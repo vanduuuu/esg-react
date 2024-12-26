@@ -13,6 +13,8 @@ import 'aos/dist/aos.css'; // Import AOS styles
 import { useEffect } from 'react';
 import Blog from './Components/Blog/Blog.js';
 import IGBC_Leading_India_Toward_a_Greener_Future_with_Sustainable_Building_Practices from './Components/Blog/IGBC_Leading_India_Toward_a_Greener_Future_with_Sustainable_Building_Practices.js'
+import Why_ESG_is_Crucial_Beyond_a_Trend_to_Building_Sustainable_and_Successful_Businesses from './Components/Blog/Why_ESG_is_Crucial_Beyond_a_Trend_to_Building_Sustainable_and_Successful_Businesses.js';
+
 function App() {
   useEffect(() => {
     // Initialize AOS only once in the root component
@@ -30,6 +32,7 @@ function App() {
         <Route path="/service" element={<Service />} />
         <Route path="/blogs" element={<Blog/>} />
         <Route path="/IGBC_Leading_India_Toward_a_Greener_Future_with_Sustainable_Building_Practices" element={<IGBC_Leading_India_Toward_a_Greener_Future_with_Sustainable_Building_Practices/>} />
+        <Route path='/Why_ESG_is_Crucial_Beyond_a_Trend_to_Building_Sustainable_and_Successful_Businesses' element={<Why_ESG_is_Crucial_Beyond_a_Trend_to_Building_Sustainable_and_Successful_Businesses/>} />
       </Routes>
       <Footer />
     </Router>

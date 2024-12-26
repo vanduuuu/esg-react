@@ -1,7 +1,8 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Blogdata from './Blogdata';
-import './Blogdetail.css'
+import './Blogdetail.css';
+import img2 from '../../assets/Leading India Toward a Greener Future with Sustainable Building Practices _2.webp'
 const BlogDetail = () => {
   const location = useLocation();
   const blog = Blogdata.find((item) => item.detailPage === location.pathname);
@@ -13,49 +14,95 @@ const BlogDetail = () => {
   return (
     <div className="container">
       <div className="blog-detail">
-        <div className='outer-blog-img'>
-        <img src={blog.image} alt={blog.title} className="blog-detail-image" />
+        <div className="outer-blog-img">
+          <img src={blog.image} alt={blog.title} className="blog-detail-image" />
         </div>
-        <h2 className='mt-3'>{blog.title}</h2>
-        <div className="blog-footer m-0">
-          <p>
+        <h2 className="mt-3">{blog.title}</h2>
+        {/* Published Date and Author */}
+        <div className="blog-meta mb-3 d-flex justify-content-between align-items-center mt-3">
+          <span>
             <b>Author:</b> {blog.author}
-          </p>
-          IGBC_Leading_India_Toward_a_Greener_Future_with_Sustainable_Building_Practices
-          <p>
+          </span>
+          <span >
             <b>Published Date:</b> {blog.date}
-          </p>
+          </span>
         </div>
-        <h5>Overview</h5>
-       <p>The Food and Agriculture Organization (FAO) estimates that by 2050, global food production must grow by approximately 60% to sustain the needs of a projected population of 9.3 billion people. With the increasing need for more food, traditional farming is facing challenges. Farmers need to use new technologies to grow enough crops, meet people's needs, and manage the use of limited natural resources.</p>
-       <p>This is where smart farming comes in. Smart farming uses modern technology to give farmers better tools to track, monitor, automate, and analyze their work. It helps in making farming more efficient and productive with advanced systems and equipment.</p>
-       <p>This method collects data and provides real-time information about crop health, soil conditions, and other important elements by utilizing technology like sensors, drones, artificial intelligence, and the Internet of Things (IoT). The e-Crop device, one of the most innovative breakthroughs in this industry, is revolutionizing how farmers monitor yields, manage their crops, and address farming issues.</p>
-       <h5>Smart farming with e-CROP</h5>
-       <p>This e-crop device is designed for smart farming by simulating crop growth in real-time. The e-Crop IoT device, developed by ICAR-Central Tuber Crops Research Institute (ICAR-CTCRI) and recently granted an Indian patent, has been licensed to Precision Grow, a division of Tech Visit IT Pvt. Ltd. Mumbai facilitated by Agrinnovate, Indian Council of Agricultural Research (ICAR), New Delhi.</p>
-       <p>On 5th June 2024, coinciding with World Environment Day, Precision Grow signed a contract for the manufacture and marketing of the innovative e-Crop technology. This farming approach uses modern technology and sustainable methods to grow more crops while reducing harm to the environment.</p>
-       <h5>How e-Crop is transforming agriculture? </h5>
-       <p>The future of smart agriculture is being shaped by technologies such as remote sensing that help manage more resources, increase output, and decrease waste. This e-Crop tool is revolutionizing agriculture in the following ways:</p>
-       <ul className='list-style-square'>
-        <li>
+        <h5>IGBC: Greener Future for India</h5>
+        <p>
+        Sustainability keeps very importance in today’s world. With growing concerns over environmental challenges, the construction industry is under increasing pressure to adopt greener and more responsible practices. The Indian Green Building Council (IGBC) has taken the lead in guiding this transformation, promoting eco-friendly construction and setting the foundation for a healthier, greener India. But what is IGBC, and how does it impact our future? Let’s take a closer look.
+        </p>
+        <h5>What is IGBC?</h5>
+        <p>
+        The Indian Green Building Council (IGBC), established in 2001 under the Confederation of Indian Industry (CII), is a key organization promoting sustainable building practices in India. Its mission is to encourage the construction of environmentally responsible buildings that enhance quality of life while reducing their ecological footprint.
+        </p>
+        <p>IGBC offers certifications to buildings that adhere to its green standards, focusing on areas such as energy efficiency, water conservation, and the use of sustainable materials. Through its efforts, IGBC is setting benchmarks for sustainable construction and encouraging a shift toward environmentally friendly development.</p>
+        <h5>Why IGBC Matters</h5>
+        <ul>
+          <li className='listingh6'>
+          <h6><i class="fa-solid fa-check"></i> Caring for the Environment</h6>
+          <p>The construction industry uses up a large share of natural resources and creates significant waste. Buildings can significantly lessen their impact on the environment by following IGBC’s suggestions. Green building practices help save energy, conserve water, and reduce waste, contributing to a cleaner, healthier planet.</p>
+          <h6><i class="fa-solid fa-check"></i> Saving Energy
+          </h6>
+          <p> Buildings with IGBC certification are designed to use energy efficiently while maintaining comfort for occupants. This not only cuts down on electricity bills but also supports India’s efforts to reduce dependence on non-renewable energy sources and lower carbon emissions.</p>
+          <h6><i class="fa-solid fa-check"></i>  Long-Term Savings
+          </h6>
+          <p>  Although green buildings may require a slightly higher initial investment, they are more economical in the long run. Energy-saving technologies and efficient water use help lower ongoing operational costs, making them a wise choice for both property owners and tenants.</p>
+          <h6><i class="fa-solid fa-check"></i> Healthier Living and Workspaces
+          </h6>
+          <p> Green buildings prioritize features like improved air quality, natural lighting, and proper ventilation, which create healthier indoor spaces. IGBC-certified buildings ensure better well-being and productivity for the people who occupy them by using materials that are free from harmful chemicals.</p>
+          <h6><i class="fa-solid fa-check"></i> Supporting National Objectives
+          </h6>
+          <p>  The IGBC contributes to India’s mission to achieve Sustainable Development Goals (SDGs). Their initiatives promote the creation of sustainable, inclusive cities that enhance quality of life, tackle challenges like climate change, and make better use of resources.</p>
+          </li>
+        </ul>
        
-            <p><strong>Real-Time Data Collection- </strong>The device's main control unit is linked to sensors that gather different weather and soil data. Rainfall, light intensity, humidity, temperature, and soil moisture are among the data that e-Crop gathers. This allows farmers to know exactly what their crops need at any given time.</p>
-        </li>
-        <li>
-            <p><strong>Precision Farming-</strong> A key part of smart farming is precision farming, which uses data and technology to make farming more accurate. In order to make better use of resources like water, fertilizer, and pesticides, tools like sensors, artificial intelligence (AI), and the Global Positioning System (GPS) help monitor crops, soil, and weather. As a result, farming methods become more sustainable, production rises, and expenses fall.</p>
-        </li>
-        <li><p><strong>Improved crop quality-</strong> The e-Crop device helps farmers improve crop quality by providing insights into crop health and spotting issues early. Using data to optimize resources and target specific areas, farmers can produce higher-quality, more pest- and disease-resistant crops.</p></li>
-        <li><p><strong>Remote Monitoring and Advisory-</strong> Via SMS or smartphone app, this e-crop gadget advises farmers about crop status in real-time, even when they are not in the field. With the help of these updates, farmers can take immediate action by following advisories on fertilizer, irrigation, pest management, and crop schedules.</p></li>
-        <li><p><strong>Sustainability-</strong> With the e-Crop smart technique, farmers can lower the use of chemicals on their crops and reduce the environmental impact of farming practices, leading to an eco-friendly approach to agriculture.</p></li>
-       </ul>
-       <h5>Impact of e-Crop on the Agricultural Sector</h5>
-       <p>The e-Crop technology helps agronomists adapt to climate change, reduce environmental impact, and boost agricultural resilience. It increases production with fewer resources, ensures food security, and supports a healthier environment.</p>
-       <p>Through technologies like sensors, drones, and AI, it enables more efficient irrigation, fertilization, pest control, and harvesting. This leads to improved crop quality, higher yields, and reduced environmental impact. </p>
-       <p>Crops like cassava <i>(Manihot esculenta)</i> and sweet potato <i>(Ipomoea batatas)</i> benefit greatly from e-Crop technology. Real-time data on soil conditions, pest threats, and irrigation needs help optimize their growth, leading to higher yields and better quality.</p>
-       <p>Additionally, e-Crop helps farmers minimize costs and risks while contributing valuable data to inform government policies and agricultural strategies, ultimately driving sustainable growth in the sector. </p>
-       <h5>The Future of Smart Farming with E-Crop</h5>
-       <p>Smart farming using e-crop has immense potential to revolutionize agriculture in the future. As technology evolves, the integration of e-cropping systems will increase, giving farmers access to cutting-edge tools such as better automation, AI-powered analytics, and sensors for precision farming.</p>
-       <p>These innovations will enable more sustainable and efficient farming practices, increase productivity, and help farmers better manage resources. With the growing use of data and connectivity, e-Crop will play a pivotal role in shaping a more resilient, profitable, and environmentally conscious agricultural future.</p>
-       <p><strong>In the hands of farmers, e-crop technology is no longer just a tool; it’s the blueprint for the next agricultural revolution. The journey of smart farming, driven by solutions like e-Crop, highlights how technology can pave the way for a more sustainable and prosperous future for agriculture. Governments, private sectors, and research institutions must collaborate to make these technologies affordable and accessible to all.</strong></p>
+        <div className='row'>
+        <div className='col-lg-6'>
+        <h5>How IGBC Certification Works</h5>
+        <p> The IGBC certification process evaluates buildings based on a comprehensive point system, assessing various factors such as:
+        </p>
+          <ul>
+            <li><p>-Energy efficiency</p></li>
+            <li><p>-Water and waste management</p></li>
+            <li><p>-Use of eco-friendly materials</p></li>
+            <li><p>-Indoor air quality</p></li>
+          </ul>
+          
+        </div>
+        <div className='col-lg-6'>
+        <img src={img2} alt={blog.title} className="blog-detail-image" />
+        </div>
+        </div>
+        <p>Depending on the score achieved, a building can earn one of the following certifications:</p>
+        <ul>
+          <li className='listingh6'>
+          <h6><i class="fa-solid fa-check"></i>  IGBC Certified:
+          </h6>
+          <p> This is the starting level of certification, showing that the building meets the basic green building standards.
+          </p>
+
+          </li>
+          <li className='listingh6'>
+          <h6><i class="fa-solid fa-check"></i>  IGBC Gold:
+          </h6>
+          <p> This is a higher level of certification, awarded to buildings that perform very well in sustainability and go beyond the basics.
+          </p>
+          </li>
+          <li className='listingh6'>
+          <h6><i class="fa-solid fa-check"></i> IGBC Platinum:
+
+          </h6>
+          <p>  This is the top certification, given to buildings that achieve outstanding results in being environmentally friendly across all areas.
+          </p>
+          </li>
+          </ul>
+          <h5>The Future of Cities with IGBC</h5>
+          <p> India’s urban areas are growing rapidly, and this urbanization demands sustainable solutions to meet the challenges of resource consumption and environmental degradation. IGBC is driving change by encouraging developers and architects to adopt green practices, ensuring that our cities evolve in harmony with nature.
+          </p>
+          <p> As more people recognize the value of eco-friendly buildings and as the government pushes for sustainable development, IGBC’s role in shaping the cities of tomorrow becomes even more significant.</p>
+          <h5>Conclusion</h5>
+          <p> The Indian Green Building Council (IGBC) is not just designing eco-friendly buildings, it’s paving the way for a sustainable future. By focusing on saving energy, conserving resources, and creating healthier spaces, IGBC is changing how we think about construction.</p>
+          <p> For builders, architects, and homeowners, IGBC standards isn’t just about going green it’s about improving our quality of life while protecting the planet. As India grows, green buildings will be key to ensuring progress doesn’t harm the environment.</p>
       </div>
     </div>
   );

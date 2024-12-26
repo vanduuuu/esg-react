@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./Subnavbar.css";
-
+import logo from '../../../assets/img/ESG-Logo.png'
 function Subnavbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,8 +25,15 @@ function Subnavbar() {
     <>
       <div className="nav-outer">
         <header className="header">
+          {/* Logo with explicit dimensions and lazy loading */}
           <a href="#" className="logo">
-            Logo
+            <img
+              src={logo}
+              alt="Logo"
+              width="110"
+              height="50"
+              loading="lazy"
+            />
           </a>
           <input type="checkbox" id="check" checked={isMenuOpen} onChange={toggleMenu} />
           <label htmlFor="check" className="icons">
@@ -55,7 +62,6 @@ function Subnavbar() {
                 Insight
               </button>
               <ul className="dropdown-menu">
-               
                 <li>
                   <NavLink to="/blogs" className="dropdown-item" onClick={handleLinkClick}>
                     Blogs

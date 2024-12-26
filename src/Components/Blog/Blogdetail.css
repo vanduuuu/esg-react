@@ -1,27 +1,32 @@
-.outer-blog-img{
-    width:100%;
-    background-color: yellow;
-    height:500px;
-    margin: auto;
-}
-.outer-blog-img img{
+  
+  .outer-blog-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-.blog-detail h2{
-    color:#037e03;
+  }
+  
+  .blog-detail h2 {
+    color: #2e657b;
     font-weight: 700;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-}
-.blog-footer p{
-    background-color: #beffbe;
-}
-.blog-detail h5{
-    color: #037e03;
-    text-decoration: underline;
-}
-.blog-detail strong{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  .blog-meta {
+    padding: 10px 0px;
+  }
+  .listingh6 h6{
+    color: #000000;
     font-style: italic;
-    color: #037e03;
+  }
+.blog-meta span{
+    font-size: 17px;
+    background-color: #d4f5d4f7;
 }
+  
+
+  .blog-detail h5 {
+    color: #2e657b;
+    text-decoration: underline;
+  }
+
+  

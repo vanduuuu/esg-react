@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './Imageslider.css';  // Import the CSS file
-import banner1 from '.././../../assets/banner-1.jpg'
-import banner2 from '.././../../assets/banner-2.jpg'
-import banner3 from '.././../../assets/banner-3.jpg'
+import banner1 from '.././../../assets/img/website banner_1.webp'
+import banner2 from '.././../../assets/img/website banner_2.webp'
+import banner3 from '.././../../assets/img/website banner_3.webp'
+
 
 const Imageslider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -56,14 +57,14 @@ const Imageslider = () => {
           </div>
         ))}
       </div>
-
+{/* 
       <div className="thumbnail">
         {reorderedImages.map((image, index) => (
           <div key={index} className={`item ${index === 0 ? 'active' : ''}`}>
             <img src={image.src} alt={image.type} className='w-100' />
           </div>
         ))}
-      </div>
+      </div> */}
 
       <div className="nextPrevArrows">
         <button className="prev" onClick={handlePrev}> 
