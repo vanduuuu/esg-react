@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import india from '../../assets/india-flag.webp';
 import us from '../../assets/us-flag.png';
-import banner5 from '../../assets/electric-car-concept-green-sustainable-energy-used-by-ev-charging-station-produced-from-renewable-resources-supply-charger-station-order-reduce-co2-emission.jpg';
+import banner5 from '../../assets/electric-car-concept.jpg';
 import './Contact.css'
 const Contact = () => {
   return (

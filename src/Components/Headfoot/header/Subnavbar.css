@@ -27,8 +27,8 @@
   width: 100%;
   height: 100%;
   /* background-color: rgba(0, 0, 0, 0.1); */
-  background: linear-gradient(to right, #f4fcfe, #c7dda5);
-  backdrop-filter: blur(50px);
+  background: linear-gradient(to right, #f4fcfe, #d5ff957a);
+    backdrop-filter: blur(50px);
   z-index: -1;
 }
 
