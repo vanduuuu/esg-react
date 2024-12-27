@@ -2,6 +2,8 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import Blogdata from './Blogdata';
 import './Blogdetail.css'
+import Breadcrumb from '../Breadcrumb';
+
 const BlogDetail = () => {
   const location = useLocation();
   const blog = Blogdata.find((item) => item.detailPage === location.pathname);
@@ -9,20 +11,31 @@ const BlogDetail = () => {
   if (!blog) {
     return <h2>Blog Not Found</h2>;
   }
-
+  const breadcrumbItems = [
+    { label: 'Home', link: '/', active: false },
+    { label: 'Blog', link: '/blogs', active: false },
+    { label: blog.title, active: true }, // Active item does not need a link
+  ];
   return (
+    <>
+  
     <div className="container">
+    <Breadcrumb items={breadcrumbItems} />
+
       <div className="blog-detail">
+
         <div className='outer-blog-img'>
         <img src={blog.image} alt={blog.title} className="blog-detail-image" />
         </div>
+
         <h2 className='mt-3'>{blog.title}</h2>
-        <div className="blog-footer m-0">
-          <p>
+        <div className="blog-meta mb-3 d-flex justify-content-between align-items-center mt-3">
+          <span>
             <b>Author:</b> {blog.author}
-        
+          </span>
+          <span >
             <b>Published Date:</b> {blog.date}
-          </p>
+          </span>
         </div>
         <h5>Overview</h5>
        <p>The Food and Agriculture Organization (FAO) estimates that by 2050, global food production must grow by approximately 60% to sustain the needs of a projected population of 9.3 billion people. With the increasing need for more food, traditional farming is facing challenges. Farmers need to use new technologies to grow enough crops, meet people's needs, and manage the use of limited natural resources.</p>
@@ -56,6 +69,7 @@ const BlogDetail = () => {
        <p><strong>In the hands of farmers, e-crop technology is no longer just a tool; it’s the blueprint for the next agricultural revolution. The journey of smart farming, driven by solutions like e-Crop, highlights how technology can pave the way for a more sustainable and prosperous future for agriculture. Governments, private sectors, and research institutions must collaborate to make these technologies affordable and accessible to all.</strong></p>
       </div>
     </div>
+    </>
   );
 };
 

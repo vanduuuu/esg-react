@@ -2,7 +2,7 @@ import React from 'react';
 import Banner from '../Banner/Banner';
 import india from '../../assets/india-flag.webp';
 import us from '../../assets/us-flag.png';
-import banner5 from '../../assets/electric-car-concept.jpg';
+import banner5 from '../../assets/img/contact-banner1.webp';
 import './Contact.css'
 const Contact = () => {
   return (
@@ -27,7 +27,7 @@ const Contact = () => {
         <div className="row">
           {/* Contact Details and Map in One Row */}
           <div className="col-lg-3 col-md-6 publisher">
-            <h3 className='contact1'>Contact Details</h3>
+            <h3 className='mb-5'>Contact Details</h3>
           
             <div className="contct">
               <ul style={{ listStyle: 'none' }}>
@@ -44,7 +44,7 @@ const Contact = () => {
 
           
           <div className="col-lg-4 col-md-6 publisher">
-            <h3 className='contact1'>Address</h3>
+            <h3 className='mb-5'>Address</h3>
             <h5>Corporate Office:</h5>
             <p>Unit No 22, Building No. 2(A3), Sector 1, Millennium Business Park, Mahape, Navi Mumbai, 400710</p>
             <h5>Regd. Office:</h5>
@@ -135,25 +135,25 @@ const Contact = () => {
       </div>
 <div class="container my-3 text-center">
   <div class="mb-4">
-    <h3 class="contact1">Business Hours</h3>
-    <p><strong>Monday to Friday:</strong> 9:00 AM - 6:00 PM</p>
+    <h3 class="boldtitle fs-2">Business Hours</h3>
+    <p><strong>Monday to Friday:</strong> 9:30 AM - 6:30 PM</p>
     <p><strong>Saturday & Sunday:</strong> Closed</p>
   </div>
 
   <div class="mb-4">
-    <h3 class="contact1">Stay Connected</h3>
+    <h3 class="boldtitle fs-2">Stay Connected</h3>
     <p>Follow us on social media to keep up with the latest insights, news, and updates in the world of ESG and sustainability.</p>
     <div>
-      <a href="https://www.linkedin.com" target="_blank" class="btn btn-outline-primary m-1">
+      <a href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEC9JIjLFxKfgAAAZQGaUmYr5ZU9Zkq2G5c2FjvyIUG3jHdKSeU8obAiJzaZEjBUvMz90VLBWMskqBKEtVffA_PoWZ-18IgyKg9h3ogiGZBxczzgYLP-O0LJmKV96ew9Iz1KbI=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2F100778255%2Fadmin%2Ffeed%2Fposts%2F" target="_blank" class="btn btn-outline-primary m-1">
         <i class="fab fa-linkedin"></i> LinkedIn
       </a>
-      <a href="https://twitter.com" target="_blank" class="btn btn-outline-primary m-1">
+      <a href="https://x.com/i/flow/login?redirect_after_login=%2Fprecision_grow" target="_blank" class="btn btn-outline-primary m-1">
         <i class="fab fa-twitter"></i> Twitter
       </a>
-      <a href="https://www.facebook.com" target="_blank" class="btn btn-outline-primary m-1">
+      <a href="https://www.facebook.com/PrecisionGrow" target="_blank" class="btn btn-outline-primary m-1">
         <i class="fab fa-facebook-f"></i> Facebook
       </a>
-      <a href="https://www.instagram.com" target="_blank" class="btn btn-outline-primary m-1">
+      <a href="https://www.instagram.com/precisiongrow_/" target="_blank" class="btn btn-outline-primary m-1">
         <i class="fab fa-instagram"></i> Instagram
       </a>
     </div>

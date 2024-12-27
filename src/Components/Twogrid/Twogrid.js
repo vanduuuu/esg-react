@@ -22,7 +22,7 @@ function Twogrid({
         data-aos="fade-up" // Apply fade-up animation here
       >
         {/* Text Column */}
-        <div className="col-lg-6">
+        <div className="col-lg-6 col-md-6">
           <h2 className="boldtitle">{title}</h2>
           <p>{description}</p>
           <ul className="p-0">
@@ -35,7 +35,7 @@ function Twogrid({
         </div>
 
         {/* Image Column */}
-        <div className="col-lg-6">
+        <div className="col-lg-6 col-md-6">
           <img src={imageSrc} alt={imageAlt} className="img-fluid" />
         </div>
       </div>

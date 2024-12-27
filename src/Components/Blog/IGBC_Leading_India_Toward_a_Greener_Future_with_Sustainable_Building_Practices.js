@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import Blogdata from './Blogdata';
 import './Blogdetail.css';
 import img2 from '../../assets/Leading India Toward a Greener Future with Sustainable Building Practices _2.webp'
+import { Breadcrumb } from 'react-bootstrap';
 const BlogDetail = () => {
   const location = useLocation();
   const blog = Blogdata.find((item) => item.detailPage === location.pathname);
@@ -10,9 +11,16 @@ const BlogDetail = () => {
   if (!blog) {
     return <h2>Blog Not Found</h2>;
   }
-
+  const breadcrumbItems = [
+    { label: 'Home', link: '/', active: false },
+    { label: 'Blog', link: '/blogs', active: false },
+    { label: blog.title, active: true }, // Active item does not need a link
+  ];
   return (
+    <>
+  
     <div className="container">
+    <Breadcrumb items={breadcrumbItems} />
       <div className="blog-detail">
         <div className="outer-blog-img">
           <img src={blog.image} alt={blog.title} className="blog-detail-image" />
@@ -105,6 +113,7 @@ const BlogDetail = () => {
           <p> For builders, architects, and homeowners, IGBC standards isn’t just about going green it’s about improving our quality of life while protecting the planet. As India grows, green buildings will be key to ensuring progress doesn’t harm the environment.</p>
       </div>
     </div>
+    </>
   );
 };
 

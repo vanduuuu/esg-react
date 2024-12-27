@@ -1,6 +1,5 @@
 .icon-slider::before,
 .icon-slider::after {
-  background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
   content: "";
   height: 100px;
   position: absolute;
@@ -26,9 +25,6 @@
 
 .icon-slider {
   background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
-  height: 130px;
-  margin: auto;
   overflow: hidden;
   position: relative;
 }
@@ -40,6 +36,11 @@
 }
 
 .icon-slide {
-  height: 100px;
-  width: 220px;
+  width: 190px;
+  padding: 10px;
+}
+@media(max-width:768px){
+  .icon-slide {
+    width: 100px;
+  }
 }

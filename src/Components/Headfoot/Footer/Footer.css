@@ -117,7 +117,7 @@ font-family: var(--para-font);
 font-weight: 400;
 }
 .courses-link-list li a:hover {
-color: #ffb606;
+color: #9ff038;
 }
 .courses-link-list li i {
 margin-right: 5px;
@@ -127,11 +127,12 @@ font-family: var(--para-font);
 color: #ffffff;
 font-weight: 400;
 }
+
 .post-date {
-color: #ffb606;
+color: #76a33d;
 margin-bottom: 3px;
 font-family: var(--para-font);
-font-weight: 400;
+font-weight: 700;
 }
 .small-post-list li+li {
 margin-top: 30px;
@@ -152,7 +153,7 @@ border: none;
 .news-letter-form input[type="submit"] {
 width: auto;
 border: none;
-background-color: #ffb606;
+background-color: #74b521;
 padding: 9px 30px;
 border-radius: 5px;
 -webkit-border-radius: 5px;
@@ -170,7 +171,7 @@ border-top: 1px solid rgba(255, 255, 255, 0.149);
 color: #ffffff;
 }
 .copy-right-text a {
-color: #ffb606;
+color: #76a33d;
 }
 .terms-privacy li+li {
 margin-left: 30px;

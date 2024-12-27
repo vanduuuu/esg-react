@@ -1,90 +1,117 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "./Subnavbar.css";
-import logo from '../../../assets/img/ESG-Logo.png'
+import logo from "../../../assets/img/ESG-Logo.png";
+
 function Subnavbar() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isActive, setIsActive] = useState(false); // Active state for dropdown
+  const [activeLink, setActiveLink] = useState(""); // Track the active link
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // For responsive menu
 
+  // Function to toggle the dropdown menu
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
-    setIsActive((prev) => !prev); // Toggle active state when clicked
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen((prev) => !prev);
+  // Function to handle the active link and close dropdown/menu
+  const handleLinkClick = (link) => {
+    setActiveLink(link); // Set the active link
+    setIsDropdownOpen(false); // Close the dropdown
+    setIsMenuOpen(false); // Close the responsive menu
   };
 
-  const handleLinkClick = () => {
-    setIsMenuOpen(false); // Close menu on link click
-    setIsActive(false); // Reset active state
-  };
+  // Dynamically set padding-top for body based on navbar height
+  useEffect(() => {
+    const navbar = document.querySelector('.header');
+    const navbarHeight = navbar.offsetHeight;
+    document.body.style.paddingTop = `${navbarHeight}px`;
+  }, []);
 
   return (
-    <>
-      <div className="nav-outer">
-        <header className="header">
-          {/* Logo with explicit dimensions and lazy loading */}
-          <a href="#" className="logo">
-            <img
-              src={logo}
-              alt="Logo"
-              width="110"
-              height="50"
-              loading="lazy"
-            />
-          </a>
-          <input type="checkbox" id="check" checked={isMenuOpen} onChange={toggleMenu} />
-          <label htmlFor="check" className="icons">
-            <i className="fa-solid fa-bars" id="menu-icon"></i>
-            <i className="fa-solid fa-xmark" id="close-icon"></i>
-          </label>
+    <div className="nav-outer">
+      <header className="header">
+        {/* Logo */}
+        <a href="#" className="logo">
+          <img src={logo} alt="Logo" width="110" height="50" loading="lazy" />
+        </a>
 
-          <nav className="navbar">
-            <NavLink to="/" className="nav-link" style={{ "--i": 1 }} onClick={handleLinkClick}>
-              Home
-            </NavLink>
-            <NavLink to="/about" className="nav-link" style={{ "--i": 2 }} onClick={handleLinkClick}>
-              About
-            </NavLink>
+        {/* Responsive Menu Toggle */}
+        <input
+          type="checkbox"
+          id="check"
+          checked={isMenuOpen}
+          onChange={() => setIsMenuOpen((prev) => !prev)}
+        />
+        <label htmlFor="check" className="icons">
+          <i className="fa-solid fa-bars" id="menu-icon"></i>
+          <i className="fa-solid fa-xmark" id="close-icon"></i>
+        </label>
 
-            {/* Dropdown for Insight */}
-            <div
-              className={`dropdown ${isDropdownOpen ? "open" : ""}`}
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
-            >
-              <button
-                className={`nav-link dropdown-toggle ${isActive ? "active" : ""}`} // Add active class
-                onClick={toggleDropdown}
-              >
-                Insight
-              </button>
-              <ul className="dropdown-menu">
-                <li>
-                  <NavLink to="/blogs" className="dropdown-item" onClick={handleLinkClick}>
-                    Blogs
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/reports" className="dropdown-item" onClick={handleLinkClick}>
-                    Reports
-                  </NavLink>
-                </li>
-              </ul>
-            </div>
+        {/* Navbar */}
+        <nav className={`navbar ${isMenuOpen ? "open" : ""}`}>
+          <NavLink
+            to="/"
+            className={`nav-link ${activeLink === "/" ? "active" : ""}`}
+            onClick={() => handleLinkClick("/")}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={`nav-link ${activeLink === "/about" ? "active" : ""}`}
+            onClick={() => handleLinkClick("/about")}
+          >
+            About
+          </NavLink>
 
-            <NavLink to="/service" className="nav-link" style={{ "--i": 3 }} onClick={handleLinkClick}>
-              Services
-            </NavLink>
-            <NavLink to="/contact" className="nav-link" style={{ "--i": 4 }} onClick={handleLinkClick}>
-              Contact
-            </NavLink>
-          </nav>
-        </header>
-      </div>
-    </>
+          {/* Dropdown for Insight */}
+          <div
+            className={`dropdown ${isDropdownOpen ? "open" : ""}`}
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <button className="nav-link dropdown-toggle" onClick={toggleDropdown}>
+              Insight
+            </button>
+            <ul className="dropdown-menu">
+              <li>
+                <NavLink
+                  to="/blogs"
+                  className={`dropdown-item ${activeLink === "/blogs" ? "active" : ""}`}
+                  onClick={() => handleLinkClick("/blogs")}
+                >
+                  Blogs
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="#"
+                  className={`dropdown-item ${activeLink === "#" ? "active" : ""}`}
+                  onClick={() => handleLinkClick("#")}
+                >
+                  Reports
+                </NavLink>
+              </li>
+            </ul>
+          </div>
+
+          <NavLink
+            to="/service"
+            className={`nav-link ${activeLink === "/service" ? "active" : ""}`}
+            onClick={() => handleLinkClick("/service")}
+          >
+            Services
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={`nav-link ${activeLink === "/contact" ? "active" : ""}`}
+            onClick={() => handleLinkClick("/contact")}
+          >
+            Contact
+          </NavLink>
+        </nav>
+      </header>
+    </div>
   );
 }
 

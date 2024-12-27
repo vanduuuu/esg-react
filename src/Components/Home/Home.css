@@ -7,40 +7,59 @@
     border-radius: 10px;
 }
 .width-1 {
-    position: relative; /* Ensures proper stacking context */
-    background-color: #415470;
-    padding: 3% 10%;
-    text-align: center;
-    background-attachment: fixed;
-    background-image: url('../../assets/beautiful-sustainability-concept.jpg'); /* Ensure this path is correct */
-    background-size: cover; /* Make sure the background image covers the whole section */
-    background-position: center; /* Center the image */
-    min-height: 400px; /* Ensure a minimum height so the background is visible */
-border-radius:0px 0px 30% 30%;
-}
-.home-contact {
-    position: relative; /* Ensure the pseudo-element is positioned correctly */
-    background-image: url('../../assets/background-02-1920x870.jpg');
-    background-size: cover; /* Ensure the background image covers the entire area */
-    background-position: bottom; /* Center the image */
-background-attachment: fixed;
-padding:50px 0px; /* You can adjust this to create space between the image and the top border */
+  position: relative;
+  background-color: #5fadd2;
+  padding: 3% 10%;
+  background-attachment: fixed;
+  background-image: url('../../assets/img/website banner_sec_3.webp');
+  background-position: right;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.home-contact::before {
+.title-para-section {
+  width: 70%;
+}
+.home-contact,.home-contact1 {
+    position: relative; /* Ensure the pseudo-element is positioned correctly */
+    /* background-image: url('../../assets/background-02-1920x870.jpg'); */
+    background-position: center; /* Center the image */
+background-attachment: fixed;
+padding:50px 0px; /* You can adjust this to create space between the image and the top border */
+background-size: cover;
+}
+.home-contact1{
+  background-image: url('../../assets/img/ecropToday-About.webp');
+}
+.home-contact{
+  background-image: url('../../assets/img/website banner_sec_5.webp');
+}
+.home-contact::before,.home-contact1::before, .width-1::before {
     content: ''; /* This creates the pseudo-element */
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: #34718ae0; /* Blue overlay with opacity */
     z-index: 1; /* Position the overlay above the background, but below the text */
 }
-
-.home-contact .container {
+.home-contact::before{
+  background: #1b7878ab; /* Blue overlay with opacity */
+}
+.home-contact1::before{
+  background:#0000005e; /* Blue overlay with opacity */
+}
+.home-contact .container,.home-contact1 .container,.width-1 .title-para-section {
     position: relative; /* Ensure the content (text) stays above the overlay */
     z-index: 2; /* Text will be displayed above the overlay */
+}
+.bigtitle{
+  letter-spacing: 3px;
+  font-size: 3.3rem;
+  font-weight: bold;
+  text-shadow: black 2px 2px 5px;
+  text-align: center;
 }
 .home-contact h1{
     text-shadow: 3px 0px 2px #14262e;
@@ -95,10 +114,25 @@ padding:50px 0px; /* You can adjust this to create space between the image and t
     p{
         font-size: 16px;  
     }
+    .bigtitle {
+      letter-spacing: 3px;
+      font-size: 47px;}
+      .width-1::before {
+     
+        background: #1b7878b5;
+    }
+    .title-para-section {
+      width: 100%;
+  }
+  .title-para-section p{
+    color:white;
+  }
 }
 @media(max-width:600px){
     .width-1{
         border-radius: 0;
         background-position: right;
     }
+    .bigtitle {
+      font-size: 27px;}
 }

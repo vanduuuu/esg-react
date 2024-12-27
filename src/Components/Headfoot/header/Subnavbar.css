@@ -6,6 +6,11 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* Ensure the content below the navbar is not overlapped */
+body {
+  padding-top: 80px;
+}
+
 /* Header */
 .header {
   position: fixed;
@@ -16,7 +21,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 100; /* Ensure navbar stays above other content */
+  background-color: #eafffa;
 }
 
 .header::before {
@@ -26,9 +32,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.1); */
-  background: linear-gradient(to right, #f4fcfe, #d5ff957a);
-    backdrop-filter: blur(50px);
+  backdrop-filter: blur(50px);
   z-index: -1;
 }
 
@@ -45,31 +49,36 @@
   align-items: center;
 }
 
-.navbar a, .navbar button {
+.navbar a,
+.navbar button {
   font-size: 1.15rem;
-  color: #000;
+  color: #1b7878;
   text-decoration: none;
   font-weight: 500;
-  /* margin-left: 2.5rem; */
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
-.navbar button ul li a{
+
+.navbar button ul li a {
   margin: 0 !important;
-  padding:0 !important;
+  padding: 0 !important;
 }
+
 /* Hover effect for nav links */
 .navbar a:hover,
 .nav-link.dropdown-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.2); /* Subtle hover effect */
-  color: #f39c12; /* Color when hovering */
+  color: #76a33d;
 }
 
 /* Active state for the dropdown toggle */
-.nav-link.dropdown-toggle.active {
-  color: #f39c12; /* Active color */
-  background-color: rgba(255, 255, 255, 0.2); /* Active background */
+/* .nav-link.dropdown-toggle.active {
+  color: #76a33d;
+} */
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #76a33d;
+  background-color: transparent;
 }
 
 /* Dropdown */
@@ -81,13 +90,13 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #333;
+  background-color: #eafffa;
   display: none;
   flex-direction: column;
   width: 100%;
   padding: 0;
   margin: 0;
-  border-radius: 4px; /* Rounded corners */
+  border-radius: 4px;
 }
 
 .dropdown.open .dropdown-menu {
@@ -101,13 +110,7 @@
   text-decoration: none;
   font-weight: 500;
   transition: background-color 0.3s ease, color 0.3s ease;
-  border-radius: 4px; /* Same rounded corners as navbar links */
-}
-
-/* Hover effect for dropdown items */
-.dropdown-item:hover {
-  background-color: #f39c12;
-  color: #fff;
+  border-radius: 4px;
 }
 
 /* Toggle Button */
@@ -117,9 +120,9 @@
 
 .icons {
   position: absolute;
-  font-size: 2.8rem;
+  font-size: 41.8px;
   cursor: pointer;
-  color: #fff;
+  color: #1b7878;
   display: none;
   right: 5%;
 }
@@ -151,7 +154,7 @@
     top: 100%;
     left: 0;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: #eafffa;
     backdrop-filter: blur(50px);
     width: 100%;
     height: 0;
@@ -166,8 +169,8 @@
   .navbar a {
     display: block;
     font-size: 1.1rem;
-    margin: 1.5rem 0;
-    text-align: center;
+    margin: -1px 0;
+    text-align: start;
     transform: translateY(-50px);
     opacity: 0;
     transition: 0.3s ease;

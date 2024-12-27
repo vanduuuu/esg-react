@@ -2,7 +2,7 @@ import React from 'react';
 import Blogcard from './Blogcard';
 import Blogdata from './Blogdata';
 import Banner from '../Banner/Banner';
-import banner4 from '../../assets/abt-banner.png';
+import banner4 from '../../assets/img/blog-banner.webp';
 
 const Blogcards = () => {
   return (

@@ -2,13 +2,16 @@
   width:60px;
 }
 .contact1{
-color:#ffc229;
-text-decoration: underline;
-margin-bottom: 30px;
+  color: #fdfbff;
+  margin-bottom: 3px;
+  font-family: var(--para-font);
+  font-weight: 600;
+  background: #76a33d70;
+  margin-bottom: 20px;
 }
 .cont-bg1 {
   position: relative;
-  background-image: url('../../assets/background-02-1920x870.jpg');
+  background-image: url('../../assets/img/contact-2.webp');
   background-size: cover;
   background-position: center;
   padding: 5% 0;
@@ -16,9 +19,9 @@ margin-bottom: 30px;
   background-attachment: fixed;
   /* background-image: linear-gradient(to right, rgb(231, 231, 246), rgba(0, 0, 0, 0.7)); Gradient from blue to black */
 }
-.frrm{
-    background-image: linear-gradient(to right, rgb(52 113 138 / 63%), rgb(52 113 138 / 92%));
-    padding:50px;
+.frrm {
+  background-image: linear-gradient(to right, #1b78785c, #1b7878d9);
+  padding: 50px;
 }
 .container-busi{
   width: 87%;
@@ -60,7 +63,7 @@ h3.text-primary {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* 0.5 for a 50% opacity black overlay */
+  background-color:#1b7878e0; /* 0.5 for a 50% opacity black overlay */
   z-index: 1;
 }
 

@@ -1,13 +1,13 @@
 // Components/About/About.js
 import React from "react";
 import "./About.css";
-import img1 from "../../assets/vision (2).jpg";
-import img2 from "../../assets/researchers-looking-alternative-energy-souces.jpg";
+import img1 from "../../assets/img/aboutpage-img1.webp";
+import img2 from "../../assets/img/aboutpage-img2.webp";
 import Banner from "../Banner/Banner";
-import banner4 from '../../assets/abt-banner.png';
+import banner4 from '../../assets/img/about-banner1.webp';
 import Titlepara from "../Titlepara/Titlepara";
 import Twogrid from "../Twogrid/Twogrid";
-import bgright from '../../assets/brand-tree.png'
+import bgright from '../../assets/img/aboutchooseus.webp'
 const About = () => {
   return (
     <>
@@ -20,7 +20,7 @@ const About = () => {
           <div className="container-fixed abt-outerr">
             <div className="mycontainer">
               <div className="row">
-                <div className="col-lg-6">
+                <div className="col-lg-6 order-md-2 order-2">
                   <div className="row">
                     <div className="col-12 col-md-6">
                       <div className="position-relative abt-img-outer">
@@ -52,21 +52,19 @@ const About = () => {
                 </div>
 
                 {/* Right grid: Text content */}
-                <div className="col-lg-6">
+                <div className="col-lg-6 order-md-2 order-1">
                   <p className="post-date">WHO WE ARE</p>
-                  <h1 className="boldtitle">
+                  {/* <h1 className="boldtitle">
                     Your Trusted Partner in ESG Consultancy for a Sustainable
                     Future
-                  </h1>
+                  </h1> */}
                   <p>
                     At Precision Grow, we are a leading ESG (Environmental,
                     Social, and Governance) consultancy committed to helping
                     organizations build sustainable and responsible businesses.{" "}
                   </p>
                   <p>
-                    Our expertise is to give precise solutions in Environmental,
-                    Social, and Governance to industries like real estate and
-                    fertilizer.
+                Our expertise is to give precise solutions in Environmental, Social, and Governance to industries like real estate, steel industry, fertilizer, and so on.
                   </p>
                   <p>
                     Precision Grow’s expert team offers strategic guidance and
@@ -96,13 +94,11 @@ const About = () => {
   title="Our Mission"
   paragraph="Our mission is simple: to drive positive change by enabling businesses to adopt and integrate effective ESG practices that benefit not just their bottom line but also society and the planet."
   titleStyle={{
-    color: '#3086b7',
+    color: ' rgb(27 120 120)',
     fontWeight: 'bold',
-    textShadow: '2px 2px 5px black',
-    textAlign:'center',
-    border:'2px solid #c2baba6b',
+    textShadow: '#f8f9fa 2px 1px 0px',
   }}
-  paraStyle={{ color: '#ffff',textAlign:'center' }}
+  paraStyle={{ color: '#ffff'}}
 />
       </section>
      </div>

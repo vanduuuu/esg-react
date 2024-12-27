@@ -43,15 +43,15 @@ const Imageslider = () => {
       <div className="list">
         {images.map((image, index) => (
           <div key={index} className={`item ${index === currentIndex ? 'active' : ''}`}>
-            <img src={image.src} alt={image.type} />
+            <img src={image.src} alt={image.type} className='img-fluid'/>
             <div className="content">
-              <div className="title">Leading with Sustainability in Real Estate</div>
+              <div className="title">Your Trusted Partner in Success</div>
               <div className="type">{image.type}</div>
               <div className="description">
-                <p>Unlock strategic frameworks designed to foster profitability, sustainability, and social responsibility in every real estate venture.</p>
+                <p>We offer strategic frameworks to create, manage, and invest in different sectors to make them profitable, socially responsible and environmentally conscious.</p>
               </div>
               <div className="button">
-                <button className="button">Start Your ESG Journey</button>
+                <button className="button">Call Our ESG Consultant</button>
               </div>
             </div>
           </div>

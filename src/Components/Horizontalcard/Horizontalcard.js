@@ -4,7 +4,7 @@ import AOS from 'aos'; // Import AOS
 import 'aos/dist/aos.css'; // Import AOS styles
 import './Horizontalcard.css'; // Import your custom CSS file for hover effects
 
-const HorizontalCard = ({ reverseLayout, title, paragraph, listItems, imageSrc, cardNumber }) => {
+const HorizontalCard = ({ reverseLayout, title, paragraph, listItems, imageSrc}) => {
   useEffect(() => {
     // Initialize AOS
     AOS.init({ duration: 1000, once: true }); // `once: true` ensures the animation runs only once
@@ -17,11 +17,7 @@ const HorizontalCard = ({ reverseLayout, title, paragraph, listItems, imageSrc, 
           {/* Image Container */}
           <div className={`col-md-4 img-container ${reverseLayout ? 'order-md-2' : ''}`} data-aos="fade-right">
             <img src={imageSrc} className="img-fluid rounded-start card-img" alt={title} />
-            {cardNumber && (
-              <div className="card-number">
-                {cardNumber}
-              </div>
-            )}
+         
           </div>
 
           {/* Content Container */}

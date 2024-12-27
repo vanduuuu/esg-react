@@ -21,7 +21,7 @@
   .card-title {
     position: relative; /* Allow positioning of the pseudo-element */
     overflow: hidden;
-    color: #26486dd4;
+    color: #1b7878;
     display: inline-block;
     padding: 5px 20px 5px 0px;
   }
@@ -72,23 +72,5 @@
     margin-right: 10px; /* Add space between the icon and text */
   }
   
-  /* Styling for the card number - Half inside and half outside the card */
-  .card-number {
-    position: absolute;
-    top: -25px;
-    right: -15px;
-    color: #4765865e;
-    font-size: 71px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 50%;
-    z-index: 2;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-shadow: 3px 0px 0px #ffffff;
-}
-  
-  /* Hover effect for the card number */
-  .card-hover:hover .card-number {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-  }
+
   

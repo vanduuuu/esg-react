@@ -2,8 +2,7 @@
 
 .banner-section {
     height: 400px; /* Fixed height for the banner */
-    background-size: cover; /* Ensure the background image covers the section */
-    background-position: center center; /* Center the background image */
+    background-size: contain; /* Ensure the background image covers the section */
     background-repeat: no-repeat; /* Prevent the image from repeating */
     position: relative; /* Allow absolute positioning of the overlay */
     color: white; /* Text color */
@@ -31,7 +30,7 @@
     z-index: 2; /* Ensure content appears above the overlay */
     max-width: 600px; /* Max width for the text block */
     padding-left: 20px; /* Space between text and the left edge */
-  top:51px;
+  top:4%;
   }
   
   /* Title styling */
@@ -42,15 +41,20 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional: Add text shadow for readability */
     margin: 0;
   }
-  
+  @media(max-width:1229px){
+    .banner-section{
+      background-size: cover;
+    }
+  }
   /* Make the banner responsive */
   @media (max-width: 768px) {
     .banner-title {
       font-size: 2rem; /* Reduce font size for smaller screens */
     }
+    
   }
   
-  @media (max-width: 576px) {
+  @media (max-width: 600px) {
     .banner-section {
       height: 300px; /* Reduce height on very small screens */
     }
@@ -58,5 +62,12 @@
     .banner-title {
       font-size: 1.5rem; /* Further reduce font size for small screens */
     }
+    .card-body{
+      padding: 0px;
+    }
+    .padding-h1 {
+      padding: 21px 0;
+      font-size: 19px;
+  }
   }
   
